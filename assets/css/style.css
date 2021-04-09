@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: whitesmoke;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 65vh;
+}
+.game-name {
+  color: rebeccapurple;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+.game-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.user-stuffs,
+.comp-stuffs {
+  padding: 0.3rem 1rem;
+  background: white;
+  border: 3px solid rebeccapurple;
+  border-radius: 0.3rem;
+}
+.user-stuffs p,
+.comp-stuffs p {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+.rock,
+.paper,
+.scissors {
+  margin: 1rem;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  transition: all 0.2s linear;
+}
+.user-stuffs .rock,
+.user-stuffs .paper,
+.user-stuffs .scissors {
+  cursor: pointer;
+}
+.user-stuffs .rock:hover,
+.user-stuffs .paper:hover,
+.user-stuffs .scissors:hover {
+  transform: scale(1.2);
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.vs {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  color: rebeccapurple;
+  font-weight: bold;
+}
