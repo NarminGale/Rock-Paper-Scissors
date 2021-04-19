@@ -71,6 +71,10 @@ img {
   color: rebeccapurple;
   font-weight: bold;
 }
+#user-score,
+#comp-score {
+  font-weight: bold;
+}
 
 @media screen and (max-width: 1008px) {
   .game-body {
