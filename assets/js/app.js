@@ -70,18 +70,41 @@
 //   }
 // }
 
+function findRandomNumber(...a) {
+  let number = Math.floor(Math.random() * a.length)
+  return a[number]
+}
+
+// Selecting user inputs
 const userStuffs = document.querySelectorAll('.user-stuffs div')
-console.log(userStuffs)
+const userScores = document.querySelector('#user-score')
+const compScores = document.querySelector('#comp-score')
+
+console.log(userScores)
+let userScore = 0
+let compScore = 0
+userScores.innerHTML = userScore
+compScores.innerHTML = compScore
 
 for (let i = 0; i < userStuffs.length; i++) {
   userStuffs[i].addEventListener('click', function (e) {
+    let randomNumber = findRandomNumber('rock', 'paper', 'scissors')
+    console.log(randomNumber)
     const classOfDiv = e.currentTarget.classList
-    if (classOfDiv.contains('rock')) {
-      console.log('rock')
-    } else if (classOfDiv.contains('paper')) {
-      console.log('paper')
-    } else if (classOfDiv.contains('scissors')) {
-      console.log('scissors')
+    console.log(classOfDiv.value)
+
+    if (randomNumber === classOfDiv.value) {
+      userScore++
+      userScores.innerHTML = userScore
+      console.log(userScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
+    } else {
+      compScore++
+      compScores.innerHTML = compScore
+      console.log(compScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
     }
   })
 }
