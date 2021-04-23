@@ -93,16 +93,56 @@ for (let i = 0; i < userStuffs.length; i++) {
     const classOfDiv = e.currentTarget.classList
     console.log(classOfDiv.value)
 
-    if (randomNumber === classOfDiv.value) {
+    if (randomNumber === 'rock' && classOfDiv.value === 'rock') {
+      console.log(userScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
+    } else if (randomNumber === 'rock' && classOfDiv.value === 'paper') {
       userScore++
       userScores.innerHTML = userScore
       console.log(userScore)
       alert(`User'choice : ${classOfDiv.value}
 Computer's choice : ${randomNumber}`)
-    } else {
+    } else if (randomNumber === 'rock' && classOfDiv.value === 'scissors') {
       compScore++
       compScores.innerHTML = compScore
-      console.log(compScore)
+      console.log(userScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
+    }
+
+    if (randomNumber === 'paper' && classOfDiv.value === 'paper') {
+      console.log(userScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
+    } else if (randomNumber === 'paper' && classOfDiv.value === 'rock') {
+      compScore++
+      compScores.innerHTML = compScore
+      console.log(userScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
+    } else if (randomNumber === 'paper' && classOfDiv.value === 'scissors') {
+      userScore++
+      userScores.innerHTML = userScore
+      console.log(userScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
+    }
+
+    if (randomNumber === 'scissors' && classOfDiv.value === 'scissors') {
+      console.log(userScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
+    } else if (randomNumber === 'scissors' && classOfDiv.value === 'rock') {
+      userScore++
+      userScores.innerHTML = userScore
+      console.log(userScore)
+      alert(`User'choice : ${classOfDiv.value}
+Computer's choice : ${randomNumber}`)
+    } else if (randomNumber === 'scissors' && classOfDiv.value === 'paper') {
+      compScore++
+      compScores.innerHTML = compScore
+      console.log(userScore)
       alert(`User'choice : ${classOfDiv.value}
 Computer's choice : ${randomNumber}`)
     }
